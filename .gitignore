@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local festival cache
+src/lib/data/festivals-cache.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
