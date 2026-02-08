@@ -1,9 +1,5 @@
 import type { Festival, FestivalDataset, Genre, Country } from "../types";
 import { ALL_GENRES, TARGET_COUNTRIES } from "../constants";
-import { fetchTicketmasterFestivals } from "./fetchers/ticketmaster";
-import { fetchDataCultureFestivals } from "./fetchers/data-culture";
-import { fetchResidentAdvisorFestivals } from "./fetchers/resident-advisor";
-import { fetchMusicFestivalWizardFestivals } from "./fetchers/music-festival-wizard";
 import { fetchManualFestivals } from "./fetchers/manual";
 
 function festivalFingerprint(f: {

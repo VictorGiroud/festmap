@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@upstash/redis": "^1.36.2",
     "canvas-confetti": "^1.9.4",
     "date-fns": "^4.1.0",
     "mapbox-gl": "^3.18.1",
