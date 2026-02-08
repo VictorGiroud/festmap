@@ -6,6 +6,7 @@ export function filtersToSearchParams(
   const params = new URLSearchParams();
 
   if (filters.genres?.length) params.set("genres", filters.genres.join(","));
+  if (filters.artists?.length) params.set("artists", filters.artists.join(","));
   if (filters.artistQuery) params.set("artist", filters.artistQuery);
   if (filters.dateFrom) params.set("from", filters.dateFrom);
   if (filters.dateTo) params.set("to", filters.dateTo);
@@ -25,6 +26,7 @@ export function searchParamsToFilters(
     genres: (params.get("genres")?.split(",") ?? undefined) as
       | Genre[]
       | undefined,
+    artists: params.get("artists")?.split(",") ?? undefined,
     artistQuery: params.get("artist") ?? undefined,
     dateFrom: params.get("from") ?? undefined,
     dateTo: params.get("to") ?? undefined,

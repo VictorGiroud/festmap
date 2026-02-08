@@ -10,6 +10,12 @@ export function applyFilters(
       if (!filters.genres.some((g) => f.genres.includes(g))) return false;
     }
 
+    // Artist select filter
+    if (filters.artists?.length) {
+      const selected = new Set(filters.artists.map((a) => a.toLowerCase()));
+      if (!f.lineup.some((a) => selected.has(a.name.toLowerCase()))) return false;
+    }
+
     // Artist search
     if (filters.artistQuery) {
       const query = filters.artistQuery.toLowerCase();

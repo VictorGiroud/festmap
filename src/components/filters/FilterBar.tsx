@@ -5,6 +5,7 @@ import { GenreFilter } from "./GenreFilter";
 import { DateRangeFilter } from "./DateRangeFilter";
 import { LocationFilter } from "./LocationFilter";
 import { ArtistSearchFilter } from "./ArtistSearchFilter";
+import { ArtistSelectFilter } from "./ArtistSelectFilter";
 import { GimsToggle } from "./GimsToggle";
 import { ActiveFilters } from "./ActiveFilters";
 
@@ -13,6 +14,7 @@ function FilterBarContent() {
     <div className="space-y-3">
       <div className="flex flex-wrap items-center gap-3">
         <ArtistSearchFilter />
+        <ArtistSelectFilter />
         <DateRangeFilter />
         <LocationFilter />
         <GimsToggle />

@@ -23,6 +23,7 @@ export function useFilters() {
       // Remove undefined/empty values
       const cleaned: FestivalFilters = {};
       if (merged.genres?.length) cleaned.genres = merged.genres;
+      if (merged.artists?.length) cleaned.artists = merged.artists;
       if (merged.artistQuery) cleaned.artistQuery = merged.artistQuery;
       if (merged.dateFrom) cleaned.dateFrom = merged.dateFrom;
       if (merged.dateTo) cleaned.dateTo = merged.dateTo;

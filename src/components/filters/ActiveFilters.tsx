@@ -20,6 +20,17 @@ export function ActiveFilters() {
     });
   }
 
+  // Artist select chips
+  for (const a of filters.artists ?? []) {
+    chips.push({
+      label: a,
+      onRemove: () =>
+        setFilters({
+          artists: (filters.artists ?? []).filter((x) => x !== a),
+        }),
+    });
+  }
+
   // Artist chip
   if (filters.artistQuery) {
     chips.push({

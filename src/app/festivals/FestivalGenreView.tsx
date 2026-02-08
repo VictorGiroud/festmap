@@ -7,6 +7,7 @@ import { GenreSection } from "@/components/festivals/GenreSection";
 import { FestivalGrid } from "@/components/festivals/FestivalGrid";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { GimsOverlay } from "@/components/gims/GimsOverlay";
+import { FestivalDataProvider } from "@/contexts/FestivalDataContext";
 import type { FestivalDataset, Genre } from "@/lib/types";
 
 type ViewMode = "genre" | "grid";
@@ -34,7 +35,7 @@ export function FestivalGenreView({ dataset }: Props) {
   }, [filters.gims]);
 
   return (
-    <>
+    <FestivalDataProvider festivals={dataset.festivals}>
       <GimsOverlay isAnimating={gimsAnimating} />
 
       <FilterBar />
@@ -91,6 +92,6 @@ export function FestivalGenreView({ dataset }: Props) {
       ) : (
         <FestivalGrid festivals={festivals} />
       )}
-    </>
+    </FestivalDataProvider>
   );
 }

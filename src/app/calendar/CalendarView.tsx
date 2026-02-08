@@ -8,6 +8,7 @@ import { ShareButton } from "@/components/ui/ShareButton";
 import { NeonBadge } from "@/components/ui/NeonBadge";
 import { GENRE_COLORS, COUNTRY_FLAGS } from "@/lib/constants";
 import { formatDateRange } from "@/lib/utils";
+import { FestivalDataProvider } from "@/contexts/FestivalDataContext";
 import type { Festival, FestivalDataset } from "@/lib/types";
 
 const MONTHS = [
@@ -122,7 +123,7 @@ export function CalendarView({ dataset }: Props) {
   const currentMonthLabel = MONTHS.find((m) => m.key === selectedMonth)!.label;
 
   return (
-    <>
+    <FestivalDataProvider festivals={dataset.festivals}>
       <FilterBar />
 
       <div className="flex items-center justify-between mb-6">
@@ -298,7 +299,7 @@ export function CalendarView({ dataset }: Props) {
           </div>
         </div>
       </div>
-    </>
+    </FestivalDataProvider>
   );
 }
 

@@ -96,6 +96,7 @@ export type DataSource =
 
 export interface FestivalFilters {
   genres?: Genre[];
+  artists?: string[];
   artistQuery?: string;
   dateFrom?: string; // YYYY-MM-DD
   dateTo?: string; // YYYY-MM-DD
