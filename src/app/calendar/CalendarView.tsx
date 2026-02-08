@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useFestivals } from "@/hooks/useFestivals";
 import { FilterBar } from "@/components/filters/FilterBar";
+import { GimsOverlay } from "@/components/gims/GimsOverlay";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { NeonBadge } from "@/components/ui/NeonBadge";
 import { GENRE_COLORS, COUNTRY_FLAGS } from "@/lib/constants";
@@ -124,6 +125,7 @@ export function CalendarView({ dataset }: Props) {
 
   return (
     <FestivalDataProvider festivals={dataset.festivals}>
+      <GimsOverlay />
       <div className="mb-8">
         <FilterBar />
       </div>

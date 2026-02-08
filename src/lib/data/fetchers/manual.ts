@@ -801,6 +801,18 @@ const EUROPE: RawFestival[] = [
     website: "https://www.dekmantelfestival.com",
     imageUrl: "/images/festivals/dekmantel.jpg",
   },
+  // ── SERBIA ──
+  {
+    name: "EXIT - No Sleep Festival",
+    city: "Belgrade",
+    country: "RS",
+    lat: 44.8258, lng: 20.4745,
+    startDate: "2026-11-28", endDate: "2026-11-28",
+    genres: ["electronic"],
+    headliners: ["Carl Cox", "Black Coffee", "Bonobo", "Maceo Plex", "Sara Landry", "I Hate Models", "Indira Paganotto", "DJ Gigola", "BIIA"],
+    website: "https://www.nosleepfestival.com",
+    imageUrl: "/images/festivals/exit-no-sleep.jpg",
+  },
   // ── SWITZERLAND ──
   {
     name: "Paléo Festival Nyon",

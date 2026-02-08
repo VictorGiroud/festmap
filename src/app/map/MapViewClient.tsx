@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useFestivals } from "@/hooks/useFestivals";
 import { FilterBar } from "@/components/filters/FilterBar";
+import { GimsOverlay } from "@/components/gims/GimsOverlay";
 import { FestivalDataProvider } from "@/contexts/FestivalDataContext";
 import type { FestivalDataset } from "@/lib/types";
 
@@ -30,6 +31,7 @@ export function MapViewClient({ dataset }: Props) {
 
   return (
     <FestivalDataProvider festivals={dataset.festivals}>
+      <GimsOverlay />
       <div className="relative h-[calc(100vh-64px)]">
         {/* Map */}
         <FestivalMap festivals={festivals} />

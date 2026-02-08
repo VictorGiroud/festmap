@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useFestivals } from "@/hooks/useFestivals";
 import { FilterBar } from "@/components/filters/FilterBar";
 import { GenreSection } from "@/components/festivals/GenreSection";
@@ -18,25 +18,12 @@ interface Props {
 
 export function FestivalGenreView({ dataset }: Props) {
   const [viewMode, setViewMode] = useState<ViewMode>("genre");
-  const { festivals, byGenre, totalCount, allCount, filters, setFilters } =
+  const { festivals, byGenre, totalCount, allCount } =
     useFestivals(dataset);
-
-  // Gims animation: trigger when filters.gims goes from false to true
-  const [gimsAnimating, setGimsAnimating] = useState(false);
-  const prevGims = useRef(filters.gims);
-
-  useEffect(() => {
-    if (filters.gims && !prevGims.current) {
-      setGimsAnimating(true);
-      const timer = setTimeout(() => setGimsAnimating(false), 7500);
-      return () => clearTimeout(timer);
-    }
-    prevGims.current = filters.gims;
-  }, [filters.gims]);
 
   return (
     <FestivalDataProvider festivals={dataset.festivals}>
-      <GimsOverlay isAnimating={gimsAnimating} />
+      <GimsOverlay />
 
       <div className="mb-8">
         <FilterBar />

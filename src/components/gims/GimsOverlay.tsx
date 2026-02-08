@@ -1,15 +1,24 @@
 "use client";
 
-import { useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import confetti from "canvas-confetti";
+import { useFilters } from "@/hooks/useFilters";
 
-interface Props {
-  isAnimating: boolean;
-  onToggle?: () => void;
-}
+export function GimsOverlay() {
+  const { filters } = useFilters();
+  const [isAnimating, setIsAnimating] = useState(false);
+  const prevGims = useRef(filters.gims);
 
-export function GimsOverlay({ isAnimating }: Props) {
+  useEffect(() => {
+    if (filters.gims && !prevGims.current) {
+      setIsAnimating(true);
+      const timer = setTimeout(() => setIsAnimating(false), 7500);
+      return () => clearTimeout(timer);
+    }
+    prevGims.current = filters.gims;
+  }, [filters.gims]);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const fireConfetti = useCallback(() => {
