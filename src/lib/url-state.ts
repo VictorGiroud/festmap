@@ -11,8 +11,8 @@ export function filtersToSearchParams(
   if (filters.dateTo) params.set("to", filters.dateTo);
   if (filters.countries?.length)
     params.set("countries", filters.countries.join(","));
-  if (filters.inFrance === false) params.set("france", "0");
-  else if (filters.inFrance === undefined) params.set("france", "all");
+  if (filters.inFrance === true) params.set("france", "1");
+  else if (filters.inFrance === false) params.set("france", "0");
   if (filters.gims) params.set("gims", "1");
 
   return params;
@@ -31,11 +31,9 @@ export function searchParamsToFilters(
     countries: (params.get("countries")?.split(",") ?? undefined) as
       | Country[]
       | undefined,
-    inFrance: params.get("france") === "all"
-      ? undefined
-      : params.has("france")
-        ? params.get("france") === "1"
-        : true,
+    inFrance: params.has("france")
+      ? params.get("france") === "1"
+      : undefined,
     gims: params.get("gims") === "1",
   };
 }

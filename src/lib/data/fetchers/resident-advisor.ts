@@ -96,7 +96,7 @@ function normalizeSchemaEvent(event: SchemaEvent, countryCode: Country): Festiva
   // Only keep summer 2026
   if (!startDate.startsWith("2026-")) return null;
   const month = parseInt(startDate.split("-")[1], 10);
-  if (month < 5 || month > 9) return null;
+  if (month < 6 || month > 8) return null;
 
   const slug = slugify(`${event.name}-${city}-2026`);
   const imageUrl = Array.isArray(event.image) ? event.image[0] : event.image;

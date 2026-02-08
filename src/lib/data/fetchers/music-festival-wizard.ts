@@ -147,9 +147,9 @@ function normalizedParsed(
   const dates = parseDateText(parsed.dateText);
   if (!dates) return null;
 
-  // Only keep summer (May-Sept)
+  // Only keep summer (June-August)
   const month = parseInt(dates.startDate.split("-")[1], 10);
-  if (month < 5 || month > 9) return null;
+  if (month < 6 || month > 8) return null;
 
   const genres =
     parsed.genres.length > 0

@@ -10,8 +10,8 @@ export function DateRangeFilter() {
       <input
         type="date"
         value={filters.dateFrom ?? ""}
-        min="2026-05-01"
-        max="2026-09-30"
+        min="2026-06-01"
+        max="2026-08-31"
         onChange={(e) =>
           setFilters({ dateFrom: e.target.value || undefined })
         }
@@ -22,8 +22,8 @@ export function DateRangeFilter() {
       <input
         type="date"
         value={filters.dateTo ?? ""}
-        min="2026-05-01"
-        max="2026-09-30"
+        min="2026-06-01"
+        max="2026-08-31"
         onChange={(e) =>
           setFilters({ dateTo: e.target.value || undefined })
         }

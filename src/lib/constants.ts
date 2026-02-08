@@ -99,8 +99,8 @@ export const TARGET_COUNTRIES: Country[] = [
 ];
 
 export const SUMMER_2026 = {
-  start: "2026-05-01",
-  end: "2026-09-30",
+  start: "2026-06-01",
+  end: "2026-08-31",
 };
 
 export const MAP_DEFAULTS = {

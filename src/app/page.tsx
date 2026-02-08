@@ -16,7 +16,7 @@ export default async function HomePage() {
         .map(([genre]) => genre)
     : [];
 
-  const monthDistribution = [5, 6, 7, 8, 9].map((month) => {
+  const monthDistribution = [6, 7, 8].map((month) => {
     const monthCount =
       dataset?.festivals.filter((f) => {
         const startMonth = parseInt(f.startDate.slice(5, 7));
@@ -146,7 +146,7 @@ export default async function HomePage() {
                       }}
                     />
                     <span className="text-[8px] font-mono text-text-muted">
-                      {["Mai", "Jui", "Jul", "Aoû", "Sep"][month - 5]}
+                      {["Jui", "Jul", "Aoû"][month - 6]}
                     </span>
                   </div>
                 ))}

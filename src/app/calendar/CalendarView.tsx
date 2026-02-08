@@ -11,11 +11,9 @@ import { formatDateRange } from "@/lib/utils";
 import type { Festival, FestivalDataset } from "@/lib/types";
 
 const MONTHS = [
-  { key: 5, label: "Mai" },
   { key: 6, label: "Juin" },
   { key: 7, label: "Juillet" },
   { key: 8, label: "Août" },
-  { key: 9, label: "Septembre" },
 ];
 
 const WEEKDAYS = ["L", "M", "M", "J", "V", "S", "D"];

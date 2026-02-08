@@ -29,11 +29,9 @@ function periodToDateRange(period?: string): { startDate: string; endDate: strin
     fevrier: { start: "2026-02-15", end: "2026-02-17" },
     mars: { start: "2026-03-15", end: "2026-03-17" },
     avril: { start: "2026-04-15", end: "2026-04-17" },
-    mai: { start: "2026-05-15", end: "2026-05-17" },
     juin: { start: "2026-06-15", end: "2026-06-17" },
     juillet: { start: "2026-07-15", end: "2026-07-17" },
     aout: { start: "2026-08-15", end: "2026-08-17" },
-    septembre: { start: "2026-09-15", end: "2026-09-17" },
   };
 
   for (const [month, dates] of Object.entries(periodMap)) {
@@ -63,9 +61,9 @@ function normalizeRecord(record: DataCultureRecord): Festival | null {
   const dates = periodToDateRange(record.periode_principale_de_deroulement_du_festival);
   if (!dates) return null;
 
-  // Only keep festivals in summer range (May-September)
+  // Only keep festivals in summer range (June-August)
   const month = parseInt(dates.startDate.split("-")[1], 10);
-  if (month < 5 || month > 9) return null;
+  if (month < 6 || month > 8) return null;
 
   const genreStr = record.sous_categorie_musique ?? record.sous_categorie_musique_cnm ?? "";
   const genres = genreStr

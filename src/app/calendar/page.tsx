@@ -31,7 +31,7 @@ export default async function CalendarPage() {
           <span className="text-text-primary">Été 2026</span>
         </h1>
         <p className="text-text-secondary mt-2 font-mono text-sm">
-          Timeline des festivals de mai à septembre 2026
+          Timeline des festivals de juin à août 2026
         </p>
       </div>
 
