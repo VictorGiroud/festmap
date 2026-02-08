@@ -13,13 +13,15 @@ export function useFestivals(dataset: FestivalDataset) {
     [dataset.festivals, filters]
   );
 
-  // Group by primary genre
+  // Group by all genres (a festival appears in every matching section)
   const byGenre = useMemo(() => {
     const map = new Map<Genre, Festival[]>();
     for (const f of filteredFestivals) {
-      const primary = f.genres[0] ?? "other";
-      if (!map.has(primary)) map.set(primary, []);
-      map.get(primary)!.push(f);
+      const genres = f.genres.length > 0 ? f.genres : (["other"] as Genre[]);
+      for (const g of genres) {
+        if (!map.has(g)) map.set(g, []);
+        map.get(g)!.push(f);
+      }
     }
     // Sort by group size descending
     return new Map(
