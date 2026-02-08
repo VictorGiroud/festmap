@@ -124,7 +124,9 @@ export function CalendarView({ dataset }: Props) {
 
   return (
     <FestivalDataProvider festivals={dataset.festivals}>
-      <FilterBar />
+      <div className="mb-8">
+        <FilterBar />
+      </div>
 
       <div className="flex items-center justify-between mb-6">
         <p className="font-mono text-xs text-text-muted">

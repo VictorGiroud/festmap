@@ -10,7 +10,7 @@ export function GenreFilter() {
   const activeGenres = filters.genres ?? [];
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1.5 sm:gap-2">
       {ALL_GENRES.map((genre: Genre) => (
         <NeonBadge
           key={genre}

@@ -60,6 +60,7 @@ export const COUNTRY_LABELS: Record<Country, string> = {
   GR: "Grèce",
   HR: "Croatie",
   NL: "Pays-Bas",
+  AT: "Autriche",
 };
 
 export const COUNTRY_FLAGS: Record<Country, string> = {
@@ -84,6 +85,7 @@ export const COUNTRY_FLAGS: Record<Country, string> = {
   GR: "\u{1F1EC}\u{1F1F7}",
   HR: "\u{1F1ED}\u{1F1F7}",
   NL: "\u{1F1F3}\u{1F1F1}",
+  AT: "\u{1F1E6}\u{1F1F9}",
 };
 
 // Countries to fetch from Ticketmaster API

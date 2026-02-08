@@ -25,7 +25,7 @@ export function ArtistSearchFilter() {
       value={localValue}
       onChange={handleChange}
       placeholder="Rechercher un artiste ou festival..."
-      className="w-64"
+      className="w-full sm:w-64"
     />
   );
 }

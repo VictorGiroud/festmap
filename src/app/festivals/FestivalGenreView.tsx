@@ -38,7 +38,9 @@ export function FestivalGenreView({ dataset }: Props) {
     <FestivalDataProvider festivals={dataset.festivals}>
       <GimsOverlay isAnimating={gimsAnimating} />
 
-      <FilterBar />
+      <div className="mb-8">
+        <FilterBar />
+      </div>
 
       {/* Toolbar */}
       <div className="flex items-center justify-between mb-6">

@@ -604,6 +604,17 @@ const EUROPE: RawFestival[] = [
   },
   // ── NETHERLANDS ──
   {
+    name: "DGTL",
+    city: "Amsterdam",
+    country: "NL",
+    lat: 52.4012, lng: 4.8941,
+    startDate: "2026-04-03", endDate: "2026-04-05",
+    genres: ["electronic"],
+    headliners: ["Dom Dolla", "CamelPhat", "Armand Van Helden", "Joy Orbison", "Jayda G", "FJAAK", "Âme", "Gerd Janson", "Jan Blomqvist", "Young Marco", "Weval", "Trikk", "Decoder"],
+    website: "https://dgtl-festival.com",
+    imageUrl: "/images/festivals/dgtl.jpg",
+  },
+  {
     name: "Defqon.1",
     city: "Biddinghuizen",
     country: "NL",
@@ -692,7 +703,6 @@ const EUROPE: RawFestival[] = [
     genres: ["electronic"],
     headliners: ["Swedish House Mafia", "Armin van Buuren", "Paul Kalkbrenner", "Dimitri Vegas", "Pendulum", "KSHMR", "Hugel", "Klangkuenstler", "John Newman"],
     website: "https://www.electriclove.at",
-    imageUrl: "/images/festivals/electric-love.jpg",
   },
   // ── ROMANIA ──
   {
@@ -704,7 +714,6 @@ const EUROPE: RawFestival[] = [
     genres: ["electronic", "pop"],
     headliners: ["Kygo", "The Chainsmokers", "Lost Frequencies", "Sebastian Ingrosso", "Steve Aoki", "Flo Rida", "Swae Lee"],
     website: "https://untold.com",
-    imageUrl: "/images/festivals/untold.png",
   },
 ];
 

@@ -18,7 +18,7 @@ export type Genre =
 
 export type Country =
   | "FR" | "BE" | "CH" | "DE" | "ES" | "IT" | "LU" | "GB"
-  | "PT" | "PL" | "DK" | "SE" | "NO" | "HU" | "RO" | "CZ" | "SK" | "IE" | "GR" | "HR" | "NL";
+  | "PT" | "PL" | "DK" | "SE" | "NO" | "HU" | "RO" | "CZ" | "SK" | "IE" | "GR" | "HR" | "NL" | "AT";
 
 export interface Coordinates {
   lat: number;

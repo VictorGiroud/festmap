@@ -6,7 +6,7 @@ export function DateRangeFilter() {
   const { filters, setFilters } = useFilters();
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1 sm:gap-2 w-full sm:w-auto">
       <input
         type="date"
         value={filters.dateFrom ?? ""}
@@ -15,7 +15,7 @@ export function DateRangeFilter() {
         onChange={(e) =>
           setFilters({ dateFrom: e.target.value || undefined })
         }
-        className="px-3 py-2 rounded-lg bg-bg-secondary border border-border-subtle text-text-primary text-sm font-mono focus:outline-none focus:border-neon-cyan/50 transition-colors [color-scheme:dark]"
+        className="flex-1 sm:flex-none px-2 sm:px-3 py-2 rounded-lg bg-bg-secondary border border-border-subtle text-text-primary text-sm font-mono focus:outline-none focus:border-neon-cyan/50 transition-colors [color-scheme:dark] min-w-0"
         aria-label="Date de début"
       />
       <span className="text-text-muted text-xs">→</span>
@@ -27,7 +27,7 @@ export function DateRangeFilter() {
         onChange={(e) =>
           setFilters({ dateTo: e.target.value || undefined })
         }
-        className="px-3 py-2 rounded-lg bg-bg-secondary border border-border-subtle text-text-primary text-sm font-mono focus:outline-none focus:border-neon-cyan/50 transition-colors [color-scheme:dark]"
+        className="flex-1 sm:flex-none px-2 sm:px-3 py-2 rounded-lg bg-bg-secondary border border-border-subtle text-text-primary text-sm font-mono focus:outline-none focus:border-neon-cyan/50 transition-colors [color-scheme:dark] min-w-0"
         aria-label="Date de fin"
       />
     </div>

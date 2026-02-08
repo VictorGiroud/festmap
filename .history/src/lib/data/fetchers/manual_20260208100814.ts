@@ -604,6 +604,17 @@ const EUROPE: RawFestival[] = [
   },
   // ── NETHERLANDS ──
   {
+    name: "DGTL",
+    city: "Amsterdam",
+    country: "NL",
+    lat: 52.4012, lng: 4.8941,
+    startDate: "2026-04-03", endDate: "2026-04-05",
+    genres: ["electronic"],
+    headliners: ["Dom Dolla", "CamelPhat", "Armand Van Helden", "Joy Orbison", "Jayda G", "FJAAK", "Âme", "Gerd Janson", "Jan Blomqvist", "Young Marco", "Weval", "Trikk", "Decoder"],
+    website: "https://dgtl-festival.com",
+    imageUrl: "/images/festivals/dgtl.jpg",
+  },
+  {
     name: "Defqon.1",
     city: "Biddinghuizen",
     country: "NL",

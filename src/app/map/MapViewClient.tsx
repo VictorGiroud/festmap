@@ -35,11 +35,11 @@ export function MapViewClient({ dataset }: Props) {
         <FestivalMap festivals={festivals} />
 
         {/* Filter overlay */}
-        <div className="absolute top-4 left-4 right-4 z-10 max-w-2xl">
-          <div className="glass rounded-xl p-3">
+        <div className="absolute top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-10 max-w-2xl">
+          <div className="glass rounded-xl p-2 sm:p-3">
             <FilterBar />
           </div>
-          <p className="font-mono text-[10px] text-text-muted mt-2 ml-1">
+          <p className="hidden sm:block font-mono text-[10px] text-text-muted mt-2 ml-1">
             {totalCount} festival{totalCount > 1 ? "s" : ""} sur la carte
           </p>
         </div>

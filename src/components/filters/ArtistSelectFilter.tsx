@@ -87,7 +87,7 @@ export function ArtistSelectFilter() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-72 max-h-80 rounded-xl bg-bg-card border border-border-subtle shadow-[0_0_30px_rgba(0,240,255,0.05)] z-50 flex flex-col overflow-hidden">
+        <div className="absolute top-full left-0 mt-2 w-[calc(100vw-3rem)] sm:w-72 max-h-80 rounded-xl bg-bg-card border border-border-subtle shadow-[0_0_30px_rgba(0,240,255,0.05)] z-50 flex flex-col overflow-hidden">
           {/* Search */}
           <div className="p-2 border-b border-border-subtle">
             <input
